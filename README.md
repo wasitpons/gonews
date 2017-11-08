@@ -1,0 +1,2 @@
+# gonews
+go project 
