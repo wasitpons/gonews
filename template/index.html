@@ -10,4 +10,13 @@
                 </p>
               </div>
 </div>
+<br/>
+<br/>
+<div>
+  <ul>
+     {{range .List}}
+        <li><a href="/news/{{.ID}}">{{.Title}}</a></li>
+     {{end}}
+  </ul>
+</div>
 {{end}}

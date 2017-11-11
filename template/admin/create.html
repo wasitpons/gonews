@@ -1,0 +1,21 @@
+{{define "root-body"}}
+  
+<form method="post">
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Header</label>
+    <textarea class="form-control" name="header" rows="1"></textarea>
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="exampleFormControlFile1">File input</label>
+    <input type="file" class="form-control-file" name="file">
+  </div>
+  <br/>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Detail</label>
+    <textarea class="form-control" name="detail" rows="5"></textarea>
+  </div> 
+  <button type="submit" class="btn btn-success btn-lg btn-block">Submit</button>
+  <button type="button" class="btn btn-danger btn-lg btn-block">Cancel</button>
+</form>
+{{end}}

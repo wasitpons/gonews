@@ -1,0 +1,21 @@
+{{define "root-body"}}
+<div>
+    Admin List<br/>
+    <a href="/admin/create">Create News</a>
+    <br>
+    <table class="table table-hover">
+    <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+            </tr>
+    </thead>
+    <tbody>
+         {{range .List}}
+         <tr>{{.ID.Hex}}</tr>
+         <tr>{{.Title}}</tr>
+         {{end}}
+    </tbody>
+    </table>
+</div>
+{{end}}

@@ -7,9 +7,12 @@ import (
 )
 
 var (
-	tpIndex      = parseTemplate("template/root.html", "template/index.html")
-	tpAdminLogin = parseTemplate("template/root.html", "template/admin.html")
-	tpNews       = parseTemplate("template/root.html", "template/news.html")
+	tpIndex       = parseTemplate("template/root.html", "template/index.html")
+	tpAdminLogin  = parseTemplate("template/root.html", "template/admin/admin.html")
+	tpNews        = parseTemplate("template/root.html", "template/news.html")
+	tpAdminList   = parseTemplate("template/root.html", "template/admin/list.html")
+	tpAdminCreate = parseTemplate("template/root.html", "template/admin/create.html")
+	tpAdminEdit   = parseTemplate("template/root.html", "template/admin/edit.html")
 )
 
 func parseTemplate(files ...string) *template.Template {
@@ -30,19 +33,4 @@ func render(t *template.Template, w http.ResponseWriter, data interface{}) {
 		log.Print(err)
 	}
 
-}
-
-// Index render
-func Index(w http.ResponseWriter, data interface{}) {
-	render(tpIndex, w, data)
-}
-
-// Admin render
-func AdminLogin(w http.ResponseWriter, data interface{}) {
-	render(tpAdminLogin, w, data)
-}
-
-// News render
-func News(w http.ResponseWriter, data interface{}) {
-	render(tpNews, w, data)
 }
